@@ -8,51 +8,52 @@
 </head>
 <body>
   <header>
-    <div class="menu-esquerda">
-      <div class="dropdown">
-        <button>Disciplinas</button>
-        <div class="dropdown-content">
-          <button onclick="mostrar('filosofia')">Filosofia</button>
-          <button onclick="mostrar('geografia')">Geografia</button>
-          <button onclick="mostrar('sociologia')">Sociologia</button>
-        </div>
-      </div>
-    </div>
-    <div>
+    <nav class="menu-externo">
+      <button onclick="mostrarDisciplina('filosofia')">Filosofia</button>
+      <button onclick="mostrarDisciplina('geografia')">Geografia</button>
+      <button onclick="mostrarDisciplina('sociologia')">Sociologia</button>
+    </nav>
+    <nav class="menu-interno">
       <button>Atividades</button>
       <button>Provas</button>
       <button>Projetos</button>
-    </div>
-    <div class="menu-direita">
-      <input type="text" placeholder="Pesquisar...">
-    </div>
+    </nav>
   </header>
 
   <main>
     <section id="filosofia" class="disciplina">
       <h2>Filosofia</h2>
-      <div class="item">Prova: Filosofia Antiga</div>
-      <div class="item">Relatório: Existencialismo</div>
-      <div class="item">Projeto: Debate sobre Ética</div>
+      <div class="secao">Atividades: Estudo dos pré-socráticos</div>
+      <div class="secao">Provas: Prova de ética</div>
+      <div class="secao">Projetos: Debate filosófico</div>
     </section>
 
-    <section id="geografia" class="disciplina">
+    <section id="geografia" class="disciplina" style="display: none;">
       <h2>Geografia</h2>
-      <div class="item">Prova: Relevo Brasileiro</div>
-      <div class="item">Relatório: Clima e Vegetação</div>
-      <div class="item">Projeto: Mapas temáticos da escola</div>
+      <div class="secao">Atividades: Análise de mapas</div>
+      <div class="secao">Provas: Prova de geopolítica</div>
+      <div class="secao">Projetos: Maquete de relevo</div>
     </section>
 
-    <section id="sociologia" class="disciplina">
+    <section id="sociologia" class="disciplina" style="display: none;">
       <h2>Sociologia</h2>
-      <div class="item">Prova: Estrutura Social</div>
-      <div class="item">Relatório: Movimentos Sociais</div>
-      <div class="item">Projeto: Pesquisa sobre Cultura</div>
+      <div class="secao">Atividades: Leitura de textos sociológicos</div>
+      <div class="secao">Provas: Prova sobre cultura</div>
+      <div class="secao">Projetos: Pesquisa social na escola</div>
     </section>
   </main>
 
   <footer>
-    Desenvolvido por: Giovanna Geovana e Rebeca Mendes
+    Desenvolvido por Giovanna Geovana e Rebeca Mendes
   </footer>
+
+  <script>
+    function mostrarDisciplina(id) {
+      const disciplinas = document.querySelectorAll('.disciplina');
+      disciplinas.forEach(secao => {
+        secao.style.display = secao.id === id ? 'block' : 'none';
+      });
+    }
+  </script>
 </body>
 </html>
