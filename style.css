@@ -1,13 +1,13 @@
 body {
     font-family: Arial, sans-serif;
     margin: 0;
-    background-color: #e247c1;
+    background-color: #f472f8;
   }
   
   .menu {
     display: flex;
     justify-content: space-between;
-    background-color: #f159dd;
+    background-color: #ddb2d7;
     padding: 10px 20px;
   }
   
