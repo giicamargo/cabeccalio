@@ -1,13 +1,13 @@
 body {
     font-family: Arial, sans-serif;
     margin: 0;
-    background-color: #f472f8;
+    background-color: #a720ac;
   }
   
   .menu {
     display: flex;
     justify-content: space-between;
-    background-color: #ddb2d7;
+    background-color: #ff89ef;
     padding: 10px 20px;
   }
   
@@ -23,7 +23,7 @@ body {
   }
   
   .menu a {
-    color: white;
+    color: rgb(255, 255, 255);
     text-decoration: none;
     font-weight: bold;
     padding: 8px 12px;
@@ -49,5 +49,5 @@ body {
   }
   
   h2 {
-    color: #ca68f1;
+    color: #000000;
   }
