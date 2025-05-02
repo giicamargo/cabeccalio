@@ -2,45 +2,111 @@
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Portfólio </title>
-  <link rel="stylesheet" href="style.css">
+  <title>Portfólio</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background-color: #f2f9f8;
+    }
+    header {
+      background-color: #2d6d7b;
+      padding: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .menu-esquerda, .menu-direita {
+      display: flex;
+      align-items: center;
+    }
+    button, .dropdown-content button {
+      background-color: #f8f4d1;
+      border: none;
+      padding: 10px 15px;
+      margin: 0 5px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+    .dropdown {
+      position: relative;
+      display: inline-block;
+    }
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      top: 40px;
+      left: 0;
+      background-color: #478f92;
+      padding: 10px;
+      flex-direction: column;
+    }
+    .dropdown-content button {
+      background-color: transparent;
+      color: white;
+      margin: 5px 0;
+    }
+    .dropdown:hover .dropdown-content {
+      display: flex;
+    }
+    main {
+      text-align: center;
+      margin-top: 50px;
+    }
+    .tema-btn {
+      margin: 10px;
+      padding: 10px 20px;
+      background-color: #3d8ebd;
+      border: none;
+      color: white;
+      font-weight: bold;
+      border-radius: 5px;
+    }
+    footer {
+      background-color: #2d6d7b;
+      color: white;
+      text-align: center;
+      padding: 10px;
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+      font-size: 14px;
+    }
+  </style>
 </head>
 <body>
-  <nav class="menu">
-    <ul class="materias">
-      <li><a href="filosofia">Filosofia</a></li>
-      <li><a href="geografia">Geografia</a></li>
-      <li><a href="sociologia">Sociologia</a></li>
-    </ul>
-    <ul class="secoes">
-      <li><a href="atividades">Atividades</a></li>
-      <li><a href="provas">Provas</a></li>
-      <li><a href="relatorios">Relatórios</a></li>
-    </ul>
-  </nav>
+  <header>
+    <div class="menu-esquerda">
+      <div class="dropdown">
+        <button>Disciplinas</button>
+        <div class="dropdown-content">
+          <button>Matemática</button>
+          <button>Física</button>
+          <button>Química</button>
+        </div>
+      </div>
+    </div>
+    <div class="menu-centro">
+      <button>Atividades</button>
+      <button>Provas</button>
+      <button>Projetos</button>
+    </div>
+    <div class="menu-direita">
+      <input type="text" placeholder="Pesquisar..." style="padding: 8px;">
+    </div>
+  </header>
 
-  <main class="conteudo">
-    <section id="filosofia">
-      <h2>Filosofia</h2>
-      <p><strong>Atividades:</strong> Textos filosóficos, debates e reflexões.</p>
-      <p><strong>Provas:</strong> Avaliações sobre ética, lógica e conhecimento.</p>
-      <p><strong>Relatórios:</strong> Análises de textos filosóficos e filósofos.</p>
-    </section>
-
-    <section id="geografia">
-      <h2>Geografia</h2>
-      <p><strong>Atividades:</strong> Atividades sobre mapas, escalas e relevo.</p>
-      <p><strong>Provas:</strong> Conteúdo: Mapa, escalas e relevo</p>
-      <p><strong>Relatórios:</strong> Relatórios de pesquisas.</p>
-    </section>
-
-    <section id="sociologia">
-      <h2>Sociologia</h2>
-      <p><strong>Atividades:</strong> Atividades sobre sociedade e cultura.</p>
-      <p><strong>Provas:</strong> Conteúdo: sociedade e cultura</p>
-      <p><strong>Relatórios:</strong> Análises sociológicas e estudos de caso.</p>
-    </section>
+  <main>
+    <h1>Portfólio</h1>
+    <h2>Física</h2>
+    <button class="tema-btn">Cinemática</button>
+    <button class="tema-btn">Dinâmica</button>
+    <button class="tema-btn">Ondulatória</button>
+    <p>Atividades de Física.</p>
   </main>
+
+  <footer>
+    Feito por Giovanna, Geovana e Rebeca Mendes.
+  </footer>
 </body>
 </html>

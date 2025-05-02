@@ -1,53 +1,79 @@
 body {
     font-family: Arial, sans-serif;
     margin: 0;
-    background-color: #a720ac;
+    background-color: #f2f9f8;
   }
   
-  .menu {
+  header {
+    background-color: #2d6d7b;
+    padding: 10px;
     display: flex;
+    align-items: center;
     justify-content: space-between;
-    background-color: #ff89ef;
-    padding: 10px 20px;
   }
   
-  .menu ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
+  .menu-esquerda, .menu-direita {
+    display: flex;
+    align-items: center;
+  }
+  
+  button, .dropdown-content button {
+    background-color: #f8f4d1;
+    border: none;
+    padding: 10px 15px;
+    margin: 0 5px;
+    cursor: pointer;
+    font-weight: bold;
+  }
+  
+  .dropdown {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    top: 40px;
+    left: 0;
+    background-color: #478f92;
+    padding: 10px;
+    flex-direction: column;
+  }
+  
+  .dropdown-content button {
+    background-color: transparent;
+    color: white;
+    margin: 5px 0;
+  }
+  
+  .dropdown:hover .dropdown-content {
     display: flex;
   }
   
-  .menu li {
-    margin: 0 10px;
+  main {
+    text-align: center;
+    margin-top: 50px;
   }
   
-  .menu a {
-    color: rgb(255, 255, 255);
-    text-decoration: none;
+  .tema-btn {
+    margin: 10px;
+    padding: 10px 20px;
+    background-color: #3d8ebd;
+    border: none;
+    color: white;
     font-weight: bold;
-    padding: 8px 12px;
+    border-radius: 5px;
   }
   
-  .menu a:hover {
-    background-color: #e95bb9;
-    border-radius: 4px;
+  footer {
+    background-color: #2d6d7b;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    font-size: 14px;
   }
   
-  .conteudo {
-    padding: 20px;
-    max-width: 900px;
-    margin: auto;
-  }
-  
-  section {
-    background-color: white;
-    border-radius: 8px;
-    margin-bottom: 20px;
-    padding: 20px;
-    box-shadow: 0 2px 6px rgba(240, 110, 159, 0.1);
-  }
-  
-  h2 {
-    color: #000000;
-  }
