@@ -2,77 +2,9 @@
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
-  <title>Portfólio</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      background-color: #f2f9f8;
-    }
-    header {
-      background-color: #2d6d7b;
-      padding: 10px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-    }
-    .menu-esquerda, .menu-direita {
-      display: flex;
-      align-items: center;
-    }
-    button, .dropdown-content button {
-      background-color: #f8f4d1;
-      border: none;
-      padding: 10px 15px;
-      margin: 0 5px;
-      cursor: pointer;
-      font-weight: bold;
-    }
-    .dropdown {
-      position: relative;
-      display: inline-block;
-    }
-    .dropdown-content {
-      display: none;
-      position: absolute;
-      top: 40px;
-      left: 0;
-      background-color: #478f92;
-      padding: 10px;
-      flex-direction: column;
-    }
-    .dropdown-content button {
-      background-color: transparent;
-      color: white;
-      margin: 5px 0;
-    }
-    .dropdown:hover .dropdown-content {
-      display: flex;
-    }
-    main {
-      text-align: center;
-      margin-top: 50px;
-    }
-    .tema-btn {
-      margin: 10px;
-      padding: 10px 20px;
-      background-color: #3d8ebd;
-      border: none;
-      color: white;
-      font-weight: bold;
-      border-radius: 5px;
-    }
-    footer {
-      background-color: #2d6d7b;
-      color: white;
-      text-align: center;
-      padding: 10px;
-      position: fixed;
-      bottom: 0;
-      width: 100%;
-      font-size: 14px;
-    }
-  </style>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfólio Escolar</title>
+  <link rel="stylesheet" href="estilo.css">
 </head>
 <body>
   <header>
@@ -80,33 +12,57 @@
       <div class="dropdown">
         <button>Disciplinas</button>
         <div class="dropdown-content">
-          <button>Matemática</button>
-          <button>Física</button>
-          <button>Química</button>
+          <button onclick="mostrar('filosofia')">Filosofia</button>
+          <button onclick="mostrar('geografia')">Geografia</button>
+          <button onclick="mostrar('sociologia')">Sociologia</button>
         </div>
       </div>
     </div>
-    <div class="menu-centro">
+    <div>
       <button>Atividades</button>
       <button>Provas</button>
       <button>Projetos</button>
     </div>
     <div class="menu-direita">
-      <input type="text" placeholder="Pesquisar..." style="padding: 8px;">
+      <input type="text" placeholder="Pesquisar...">
     </div>
   </header>
 
   <main>
-    <h1>Portfólio</h1>
-    <h2>Física</h2>
-    <button class="tema-btn">Cinemática</button>
-    <button class="tema-btn">Dinâmica</button>
-    <button class="tema-btn">Ondulatória</button>
-    <p>Atividades de Física.</p>
+    <section id="filosofia" class="disciplina">
+      <h2>Filosofia</h2>
+      <div class="item">Prova: Filosofia Antiga</div>
+      <div class="item">Relatório: Existencialismo</div>
+      <div class="item">Projeto: Debate sobre Ética</div>
+    </section>
+
+    <section id="geografia" class="disciplina">
+      <h2>Geografia</h2>
+      <div class="item">Prova: Relevo Brasileiro</div>
+      <div class="item">Relatório: Clima e Vegetação</div>
+      <div class="item">Projeto: Mapas temáticos da escola</div>
+    </section>
+
+    <section id="sociologia" class="disciplina">
+      <h2>Sociologia</h2>
+      <div class="item">Prova: Estrutura Social</div>
+      <div class="item">Relatório: Movimentos Sociais</div>
+      <div class="item">Projeto: Pesquisa sobre Cultura</div>
+    </section>
   </main>
 
   <footer>
-    Feito por Giovanna, Geovana e Rebeca Mendes.
+    Desenvolvido por: Giovanna Geovana e Rebeca Mendes
   </footer>
+
+  <script>
+    function mostrar(id) {
+      const secoes = document.querySelectorAll('.disciplina');
+      secoes.forEach(secao => {
+        secao.style.display = secao.id === id ? 'block' : 'none';
+      });
+    }
+    mostrar('filosofia');
+  </script>
 </body>
 </html>
